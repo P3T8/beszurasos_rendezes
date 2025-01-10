@@ -1,19 +1,19 @@
+import random
+
 def main():
-    # Bekéri az elemek számát
-    N = int(input("Adja meg az elemek számát: "))
+    # Kérjük be a tömb méretét
+    N = int(input("Add meg a tömb méretét (N): "))
 
-    # Létrehozza a listát és feltölti értékekkel
-    T = []
-    for i in range(N):
-        elem = int(input(f"Adja meg a(z) {i + 1}. elemet: "))
-        T.append(elem)
+    # Készítsünk egy tömböt és töltsük fel véletlen számokkal
+    T = [random.randint(1, 100) for _ in range(N)]
 
-    # Sorba rendezi a listát
+    print("Eredeti tömb:", T)
+
+    # Rendezzük sorba a tömböt
     T.sort()
 
-    # Kiírja a rendezett listát
-    print("A rendezett tömb:", ", ".join(map(str, T)))
+    # Írjuk ki a rendezett tömböt
+    print("Rendezett tömb:", T)
 
 if __name__ == "__main__":
     main()
-
